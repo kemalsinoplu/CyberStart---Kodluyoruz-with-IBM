@@ -1,0 +1,13 @@
+**Merge Sort Aşamaları:**
+
+1. [16,21,11],[8,12,22] (Dizi ikiye bölünür)
+2. [16],[21,11],[8],[12,22] (Her bir alt dizi teker teker parçalanır)
+3. [16],[11,21],[8],[12,22] (Alt diziler sıralanır)
+4. [11,16,21],[8],[12,22] (Alt diziler birleştirilir)
+5. [11,16,21],[8,12,22] (Tüm diziler birleştirilir)
+
+**Big-O Gösterimi:** Merge Sort'un Big-O gösterimi O(n log n)'dir.
+
+Bu aşamalar, Merge Sort'un aşamalarını temsil etmektedir. Dizi, parçalanır, ardından parçalar sıralanır ve birleştirilir. 
+Bu süreç, logaritmik bir zamanda gerçekleşir, çünkü her adımda dizi boyutu yarıya indirilir (log n), 
+her parçanın birleştirilmesi ise lineer bir süreçtir (n). Bu nedenle, toplam karmaşıklık O(n log n) olur.
