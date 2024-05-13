@@ -1,0 +1,51 @@
+## Binary Search Tree (BST) Oluşturma Aşamaları
+
+Verilen diziyi ([7, 5, 1, 8, 3, 6, 0, 9, 4, 2]) bir Binary Search Tree (BST) olarak sıralayalım:
+
+**1. Aşama: Kök (Root) Seçimi:**
+
+Dizi elemanlarından herhangi birini seçerek kökü oluştururuz. Bu örnekte ilk elemanı **7**'yi kök olarak seçelim.
+
+**2. Aşama: Kökten Küçük Elemanların Eklemesi:**
+
+Kökten **küçük** olan elemanları sol alt ağaca ekleyeceğiz. Diziyi tarayarak 7'den küçük elemanları bulalım: **5, 1, 3, 2**.
+
+- 5'i kökün soluna ekleriz.
+- 1'i 5'in soluna ekleriz.
+- 3'ü 1'in sağ altına ekleriz.
+- 2'yi 1'in sol altına ekleriz.
+
+**3. Aşama: Kökten Büyük Elemanların Eklemesi:**
+
+Kökten **büyük** olan elemanları sağ alt ağaca ekleyeceğiz. Diziyi tarayarak 7'den büyük elemanları bulalım: **8, 6, 0, 9, 4**.
+
+- 8'i kökün sağına ekleriz.
+- 6'yı 8'in soluna ekleriz.
+- 0'ı 6'nın sol altına ekleriz.
+- 9'u 8'in sağ altına ekleriz.
+- 4'ü 6'nın sağ altına ekleriz.
+
+**Oluşan BST:**
+
+```
+         7
+        / \
+       /   \
+      5     8
+     / \   / \
+    1   3   6   9
+   / \ / \ / \
+  2   0 4   null null
+```
+
+**Açıklama:**
+
+- Herhangi bir elemandan **küçük** olan elemanlar sol alt ağaca eklenir.
+- Herhangi bir elemandan **büyük** olan elemanlar sağ alt ağaca eklenir.
+- Bu işlem tüm dizi elemanları eklenene kadar tekrarlanır.
+- Her adımda, eklenen eleman kökle karşılaştırılır ve buna göre sol veya sağ alt ağaca yerleştirilir.
+
+**Not:**
+
+- Bu örnekte, ilk eleman kökü olarak seçilmiştir. Farklı bir eleman da kök olarak seçilebilir ve bu da farklı bir BST oluşturabilir.
+- BST'nin dengeli olması için ekleme sırası önemli değildir. Fakat rastgele eklemeler, ağacın dengesiz olmasına yol açabilir. Dengeli bir BST, arama ve ekleme gibi işlemleri daha hızlı hale getirir.
