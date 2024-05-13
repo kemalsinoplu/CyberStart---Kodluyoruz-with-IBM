@@ -1,0 +1,33 @@
+**Insertion Sort Aşamaları:**
+
+- [**22**,27,16,2,18,6] (22 sabit, herhangi bir değişiklik yapmadan devam eder)
+- [22,**27**,16,2,18,6] (27, 22'den büyük olduğu için 22'nin sağına yerleştirilir)
+- [22,27,**16**,2,18,6] (16, 27'den küçük olduğu için 27'nin soluna, 22'den büyük olduğu için 22'nin sağına yerleştirilir)
+- [**2**,22,27,16,18,6] (2, dizinin başına taşındığı için 22 ve 27'nin soluna yerleştirilir)
+- [2,**16**,22,27,18,6] (16, 2'den büyük olduğu için 2'nin sağına, 22'den küçük olduğu için 22'nin soluna yerleştirilir)
+- [2,16,**18**,22,27,6] (18, 16'dan büyük olduğu için 16'nın sağına, 22'den küçük olduğu için 22'nin soluna yerleştirilir)
+- [2,16,18,**22**,27,6] (22, 18'den büyük olduğu için 18'in sağına, 27'den küçük olduğu için 27'nin soluna yerleştirilir)
+- [2,6,16,18,22,**27**] (27, dizinin son elemanı olduğu için herhangi bir değişiklik yapmadan devam eder)
+
+**Big-O Gösterimi:** Insertion Sort'un Big-O gösterimi O(n^2)'dir.
+
+**Time Complexity:**
+- **Average case:** Aradığımız sayının ortada olması -> O(n)
+- **Worst case:** Aradığımız sayının sonda olması -> O(n)
+
+---
+
+**Selection Sort Aşamaları:**
+1. [**2**,7,5,8,3,9,4,15,6] (En küçük elemanı seçmek için)
+2. [2,**3**,5,8,7,9,4,15,6] (2'nin yerine yerleştirmek için)
+3. [2,3,**4**,8,7,9,5,15,6] (3'ün yerine yerleştirmek için)
+4. [2,3,4,**5**,7,9,8,15,6] (4'ün yerine yerleştirmek için)
+
+Bu aşamalarda her bir adımda en küçük eleman seçilip onun yerine yerleştirme işlemi yapılır.
+
+Bu nedenle, ilk 4 adım şu şekildedir:
+
+1. [**2**,7,5,8,3,9,4,15,6]
+2. [2,**3**,5,8,7,9,4,15,6]
+3. [2,3,**4**,8,7,9,5,15,6]
+4. [2,3,4,**5**,7,9,8,15,6]
